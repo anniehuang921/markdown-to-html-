@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1 id="只要會-markdown-就能寫出漂亮網頁">只要會 markdown 就能寫出漂亮網頁</h1>
+<div class="figure">
+<img src="https://openclipart.org/image/200px/svg_to_png/233385/girlc.png" alt="Welcome" />
+<p class="caption"><strong>Welcome</strong></p>
+</div>
+<h2 id="有沒有那麼厲害">有沒有那麼厲害！？</h2>
+<p>要先準備的東西</p>
+<ul>
+<li>markdown <a href="https://www.youtube.com/playlist?list=PLDdZo0QJkJD8CxzUjAc_vTPQGP_ND_fj1">簡易影片教學</a></li>
+<li>pandoc <a href="http://pandoc.org/">連 command line 都手把手教學的善心官網</a></li>
+<li>bootstrap <a href="http://getbootstrap.com/getting-started/">複製貼上 CDN</a></li>
+</ul>
+<h2 id="幾個重要的步驟和指令">幾個重要的步驟和指令</h2>
+<table class= "table table-striped table-bordered">
+<thead>
+<tr class="header">
+<th align="left">order</th>
+<th align="left">command</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1.製作 .md 檔</td>
+<td align="left">make a .md file , under pandoc-test folder</td>
+</tr>
+<tr class="even">
+<td align="left">2.到 terminal 上</td>
+<td align="left">go to terminal</td>
+</tr>
+<tr class="odd">
+<td align="left">3. 執行轉換</td>
+<td align="left">$ pandoc test.md -f markdown -t html -s -o test.html</td>
+</tr>
+<tr class="even">
+<td align="left">4. 加入 bootstrap CDN</td>
+<td align="left">add bootstrap CDN in header</td>
+</tr>
+<tr class="odd">
+<td align="left">5. 改成所需 class</td>
+<td align="left">add any class type you need</td>
+</tr>
+<tr class="even">
+<td align="left">6. 開檔案</td>
+<td align="left">$ open test.html</td>
+</tr>
+</tbody>
+</table>
+<h2 id="先把缺點講出來">先把缺點講出來</h2>
+<p><strong>每一次轉檔後，就要重新添加 Bootstrap CDN 還有 class。</strong></p>
+<h4 id="checkbox-不行">checkbox 不行</h4>
+<ul>
+<li>[ ] 或許可以</li>
+<li>[x] 或許不行</li>
+</ul>
+<h4 id="數學符號可以但有點醜">數學符號可以，但有點醜</h4>
+<h2 id="int_ab-fx-dx"><br /><span class="math display">∫<sub><em>a</em></sub><sup><em>b</em></sup><em>f</em>(<em>x</em>)<em>d</em><em>x</em></span><br /></h2>
+<h3 id="一些常用的-class">一些常用的 class</h3>
+<p>表示法用 <em>class = [ ]</em></p>
+<ul>
+<li><code>&lt;table class= &quot;table table-striped table-bordered&quot;&gt;</code></li>
+</ul>
+<h2 id="bootstrap-cdn-code">Bootstrap CDN code</h2>
+<pre><code>&lt;!-- Latest compiled and minified CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&quot; integrity=&quot;sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7&quot; crossorigin=&quot;anonymous&quot;&gt;
+
+&lt;!-- Optional theme --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css&quot; integrity=&quot;sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r&quot; crossorigin=&quot;anonymous&quot;&gt;
+
+&lt;!-- Latest compiled and minified JavaScript --&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js&quot; integrity=&quot;sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;</code></pre>
+</body>
+</html>
