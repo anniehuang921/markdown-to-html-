@@ -12,9 +12,7 @@ to be more beautiful html
 
 ## 幾個重要的步驟和指令
 |order|command|
-
 |--|:--|
-
 |1.製作 .md 檔|make a .md file , under pandoc-test folder|
 |2.到 terminal 上|go to terminal|
 |3. 執行轉換|$ pandoc test.md -f markdown -t html -s -o test.html|
